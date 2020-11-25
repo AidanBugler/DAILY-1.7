@@ -2,14 +2,19 @@ import java.util.Scanner;
 
 class Main {
   public static void main(String[] args) {
-  
-  //VAR FOR ARRAY 
+   //VAR FOR ARRAY 
   Scanner input = new Scanner(System.in);
-  String [] items = new String[5];
-  int [] price = new int[5];
-  int [] amount = new int[5];
+  
+  int x;
+  System.out.println("How many items are there?");
+  x = Integer.parseInt(input.nextLine());
+  
+  String [] items = new String[x+1];
+  int [] price = new int[x+1];
+  int [] amount = new int[x+1];
+ 
   //IMPUT FOR FIRST ARRAY 
-  for (int i=1; i<5; i++)
+  for (int i=1; i<x+1; i++)
   {
     System.out.println("Enter Item #"+i);
     items[i]=input.nextLine();
@@ -19,7 +24,7 @@ class Main {
     amount[i]=Integer.parseInt(input.nextLine()); 
   }
  System.out.println("");
-  for (int i=1; i<5; i++)
+  for (int i=1; i<x+1; i++)
   {
     System.out.println("");
     System.out.println(items[i]);
